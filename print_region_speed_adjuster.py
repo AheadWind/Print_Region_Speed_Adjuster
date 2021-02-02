@@ -128,7 +128,7 @@ def adjust_gcode_print(io_paths,regions,speed_multiplier):
         
             # if the current position is within the defined region
             if (x is None) or (y is None) or (z is None):
-                continue
+                pass
             elif (regions[0] <= x <= regions[1]) and (regions[2] <= y <= regions[3]) and (regions[4] <= z <= regions[5]):
                 # find the F value and change it
                 for i in range(len(line_array)):
